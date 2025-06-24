@@ -1,23 +1,28 @@
 body {
-  font-family: Arial, sans-serif;
-    background-image: radial-gradient(circle at 4% 15%, #eee 0%, #eee 1.5%, transparent calc(1.5% + 1px), transparent 100%), radial-gradient(circle at 4% 50%, #eee 0%, #eee 1.5%, transparent calc(1.5% + 1px), transparent 100%), radial-gradient(circle at 4% 85%, #eee 0%, #eee 1.5%, transparent calc(1.5% + 1px), transparent 100%), linear-gradient(90deg, transparent 0%, transparent 10%, #DB676C 10%, #DB676C calc(10% + 2px), transparent calc(10% + 2px), transparent 100%), linear-gradient(180deg, white 12%, transparent 12%), repeating-linear-gradient(180deg, #91C1E1 0px, #91C1E1 1px, transparent 1px, transparent 30px), linear-gradient(white,white);  display: flex;
+  font-family: 'Roboto Condensed', Arial, sans-serif;
+  background-image: radial-gradient(circle at 4% 15%, #eee 0%, #eee 1.5%, transparent calc(1.5% + 1px), transparent 100%),
+    radial-gradient(circle at 4% 50%, #eee 0%, #eee 1.5%, transparent calc(1.5% + 1px), transparent 100%),
+    radial-gradient(circle at 4% 85%, #eee 0%, #eee 1.5%, transparent calc(1.5% + 1px), transparent 100%),
+    linear-gradient(90deg, transparent 0%, transparent 10%, #DB676C 10%, #DB676C calc(10% + 2px), transparent calc(10% + 2px), transparent 100%),
+    linear-gradient(180deg, white 12%, transparent 12%),
+    repeating-linear-gradient(180deg, #91C1E1 0px, #91C1E1 1px, transparent 1px, transparent 30px),
+    linear-gradient(white, white);
+  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  color: #6b2e2e; /* vermelho mais suave para contraste */
+  color: #6b2e2e;
   padding: 20px;
 }
-
-
 
 .calculadora {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(8, 8, 8, 0.5);
-  width: 360px;
-  max-width: 100%;
-  padding: 20px 30px 30px 30px;
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -40,6 +45,7 @@ input#preco {
   font-weight: 600;
   outline-offset: 2px;
   transition: border-color 0.3s ease;
+  width: 100%;
 }
 
 input#preco::placeholder {
@@ -61,6 +67,7 @@ input#preco:focus {
   cursor: pointer;
   border: none;
   transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 .botao-adicionar:hover {
@@ -102,8 +109,13 @@ input#preco:focus {
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 20px;
+  width: 100%;
 }
 
 .reset:hover {
   background-color: #8B0000;
+}
+
+input, button {
+  font-size: 16px;
 }
