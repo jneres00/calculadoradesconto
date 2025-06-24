@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora Descontos D'Ville</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#8B0000" />
+<link rel="icon" href="icon-192.png" />
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+  <div class="calculadora">
+    <h1>Calculadora Descontos D'Ville</h1>
+
+    <input type="number" id="preco" placeholder="Digite o preço do produto" />
+
+    <button class="botao-adicionar" onclick="adicionarProduto()">Adicionar</button>
+
+    <div id="lista"></div>
+
+    <div class="totais">
+      <p>Total com desconto: R$ <span id="total">0,00</span></p>
+      <p>Saldo restante do V.A: R$ <span id="restante">500,00</span></p>
+    </div>
+
+    <button class="reset" onclick="resetar()">Resetar Tudo</button>
+
+
+
+  <script src="script.js"></script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(reg => console.log('Service Worker registrado:', reg))
+      .catch(err => console.error('Erro ao registrar Service Worker:', err));
+  }
+</script>
+
+</body>
+</html>
